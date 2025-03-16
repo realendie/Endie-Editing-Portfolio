@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endie's Editing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/Images/Endie's_Editing_New.ico">
+</head>
+
+<body>
+    <header>
+        <h1>Endie's Editing</h1>
+        <p id="moto"><i>"From a Dream to a Screen"</i></p>
+    </header>
+
+    <section class="about_me">
+        <h2 id="about_me-header">Hi, I'm Wyatt!</h2>
+        <p id="about_me-paragraph">I am a 15-year-old video editor with over two years of experience. Please feel free
+            to reach out and check out some of my work below!</p>
+    </section>
+
+    <section class="slideshow-container">
+        <!-- Container to maintain 16:9 aspect ratio -->
+        <div id="videoPlayer">
+            <iframe id="videoFrame" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0"
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <button id="prevBtn">&#10094;</button>
+        <button id="nextBtn">&#10095;</button>
+    </section>
+
+    <script>
+        // Array to hold YouTube video URLs
+        const videos = [
+            "https://www.youtube.com/embed/dQw4w9WgXcQ", // Example YouTube video 1
+            "https://www.youtube.com/embed/tgbNymZ7vqY", // Example YouTube video 2
+            "https://www.youtube.com/embed/3JZ_D3ELwOQ"  // Example YouTube video 3
+        ];
+        let currentVideo = 0;
+        const videoFrame = document.getElementById("videoFrame");
+
+        // When the next button is clicked, move to the next video
+        document.getElementById("nextBtn").addEventListener("click", () => {
+            currentVideo = (currentVideo + 1) % videos.length;
+            videoFrame.src = videos[currentVideo] + "?autoplay=1"; // Update iframe source
+        });
+
+        // When the previous button is clicked, move to the previous video
+        document.getElementById("prevBtn").addEventListener("click", () => {
+            currentVideo = (currentVideo - 1 + videos.length) % videos.length;
+            videoFrame.src = videos[currentVideo] + "?autoplay=1"; // Update iframe source
+        });
+    </script>
+    <footer>
+        <p>&copy; Wyatt Johnson 2025</p>
+    </footer>
+</body>
+
+</html>
