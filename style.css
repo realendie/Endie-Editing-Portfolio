@@ -8,6 +8,15 @@ body {
     padding: 0;
 }
 
+#corner-icon {
+    position: absolute; 
+    top: 10px;      
+    left: 10px;      
+    width: 80px;     
+    height: 80px;
+    z-index: 0;   
+}
+
 #moto{
     font-size: 20px;
     font-weight: bold;
@@ -21,10 +30,60 @@ header {
     font-weight: bold;
 }
 
+/* Navigation styles */
+#main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+#main-nav li {
+    margin: 0 15px;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#main-nav a:hover, #main-nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Section navigation styles */
+.section-nav {
+    margin-top: 30px;
+}
+
+.section-nav-btn {
+    position: relative;
+    margin: 0 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.section-nav-btn:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* About Me section styles */
 .about_me{
     text-align: left;
     margin-top: 50px;
     margin-left: 9.9%;
+    margin-right: 9.9%;
+    margin-bottom: 50px;
 }
 
 #about_me-header{
@@ -33,19 +92,23 @@ header {
     margin-top: 20px;
 }
 
-#about_me-text{
-    font-size: 25px;
+#about_me-paragraph{
+    font-size: 18px;
     margin-top: 20px;
+    line-height: 1.6;
 }
 
-/* Slideshow container styles */
+/* Portfolio section styles */
 .slideshow-container {
     position: relative;
     max-width: 80%;
     margin: 50px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+#portfolio-header {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
 /* Video container and iframe styles for responsive 16:9 aspect ratio */
@@ -65,8 +128,8 @@ header {
     left: 0;
 }
 
-/* Button styles */
-button {
+/* Video navigation buttons */
+#prevBtn, #nextBtn {
     position: absolute;
     background: rgba(255, 255, 255, 0.2);
     border: none;
@@ -75,39 +138,101 @@ button {
     color: white;
     font-size: 18px;
     border-radius: 5px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #prevBtn {
-    left: 10px;
+    left: -50px;
 }
 
 #nextBtn {
-    right: 10px;
+    right: -50px;
 }
 
-/* Button hover effect */
-button:hover {
+#prevBtn:hover, #nextBtn:hover {
     background: rgba(255, 255, 255, 0.5);
 }
 
+/* Hire Me section styles */
+.hire-me {
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 9.9%;
+    margin-right: 9.9%;
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
 
+#hire_me-header {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.hire-me form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.hire-me input, .hire-me textarea {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #2e2e2e;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.hire-me button[type="submit"] {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    width: 200px;
+    text-align: center;
+}
+
+.hire-me button:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.hire-me label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Contact Me section styles */
 .contact_me {
     background-color: #1e1e1e;
     padding: 40px;
     margin-top: 50px;
     border-radius: 10px;
     max-width: 600px;
-    max-height: 225px;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-    text-align: center; /* Centers the button */
+    text-align: left;
 }
 
 #contact_me-header {
     font-size: 30px;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 a {
@@ -121,4 +246,29 @@ a {
     font-size: 20px;
     margin-top: 20px;
     color:white;
+    line-height: 1.6;
+}
+
+/* Footer styles */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    text-align: center;
+}
+
+/* Section visibility control */
+.section-content {
+    display: none;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+#footer-icon {
+    position: absolute;
+    float: bottom;  /* Move it to the bottom */
+    right: 10px;   /* Move it to the right */
+    width: 50px;
+    height: 50px;
+    z-index: 0;
 }

@@ -10,6 +10,8 @@
 </head>
 
 <body>
+    <img src="assets/Images/Endie's_Editing_New.ico" alt="Corner Icon" id="corner-icon">
+
     <header>
         <h1>Endie's Editing</h1>
         <p id="moto"><i>"From a Dream to a Screen"</i></p>
@@ -53,22 +55,28 @@
             videoFrame.src = videos[currentVideo] + "?autoplay=1"; // Update iframe source
         });
     </script>
-    <section class="contact_me">
-        <h1 id="contact_me-header">Contact Me!</h1>
-        <div class="contact_me-links">
-            <a href="mailto:enderprooffical@gmail.com">✉ Email Me</a>
-            <br>
-            <a href="tel:+1828903EDIT">🕻 Call Me</a>
-            <br>
-            <br>
-            or
-            <br>
-            <br>
-            <a href="https://discord.gg/fKjcn2gT7G">Join the Discord</a>
-        </div>
+
+    <section class="hire-me">
+        <h2 id="hire_me-header">Hire Me!</h2>
+        <form action="#" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="contact" class="hire_me-labels">Contact Info (Discord or Email):</label><br>
+            <input type="text" id="contact" name="contact" required><br><br>
+
+            <label for="project" class="hire_me-labels">Project Description:</label><br>
+            <textarea id="project" name="project" rows="4" required></textarea><br><br>
+
+            <label for="references" class="hire_me-labels">References:</label><br>
+            <textarea id="references" name="references" rows="3"></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
     </section>
     <br>
     <footer>
+        <img src="assets/Images/Endie's_Editing_New.ico" alt="Corner Icon" id="footer-icon">
         <p>&copy; Wyatt Johnson 2025</p>
     </footer>
 </body>
