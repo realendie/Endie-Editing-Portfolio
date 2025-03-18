@@ -8,15 +8,6 @@ body {
     padding: 0;
 }
 
-#corner-icon {
-    position: absolute; 
-    top: 10px;      
-    left: 10px;      
-    width: 80px;     
-    height: 80px;
-    z-index: 0;   
-}
-
 #moto{
     font-size: 20px;
     font-weight: bold;
