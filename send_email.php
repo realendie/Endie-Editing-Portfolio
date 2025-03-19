@@ -2,15 +2,15 @@
 // Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data and sanitize inputs
-    $name = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
-    $contact = filter_var($_POST["contact"], FILTER_SANITIZE_STRING);
-    $project = filter_var($_POST["project"], FILTER_SANITIZE_STRING);
-    $references = filter_var($_POST["references"], FILTER_SANITIZE_STRING);
-    
+    $name = filter_var($_POST["name"]);
+    $contact = filter_var($_POST["contact"]);
+    $project = filter_var($_POST["project"]);
+    $references = filter_var($_POST["references"]);
+
     // Set email recipient and subject
     $to = "enderprooffical@gmail.com";
     $subject = "New Project Inquiry from $name";
-    
+
     // Compose the email message
     $message = "
     <html>
@@ -26,16 +26,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </body>
     </html>
     ";
-    
+
     // Set email headers for HTML content
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= "From: website@yourdomain.com" . "\r\n";
-    $headers .= "Reply-To: $contact" . "\r\n";
-    
+    $headers .= "From: endies-editing.netlify.app" . "\r\n";
+
     // Send the email
     $success = mail($to, $subject, $message, $headers);
-    
+
     // Provide feedback to the user
     if ($success) {
         // Redirect to a thank you page or show a success message
@@ -128,4 +127,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: index.html");
     exit;
 }
-?>
