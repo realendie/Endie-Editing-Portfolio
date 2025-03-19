@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "References:\r\n" . $references;
 
     // Headers
-    $headers = "From: website@yourdomain.com" . "\r\n" .
+    $headers = "From: enderprooffical@gmail.com" . "\r\n" .
         "Reply-To: " . $contact . "\r\n" .
         "X-Mailer: PHP/" . phpversion();
 
