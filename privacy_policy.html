@@ -7,13 +7,20 @@
     <title>Endie's Editing - Privacy Policy</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="assets/Images/Endie's_Editing_New.ico">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+        </script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
 </head>
 
 <body>
-    <header>
-        <h1>Endie's Editing</h1>
-        <p id="moto"><i>"From a Dream to a Screen"</i></p>
-    </header>
+    <div id="header"></div>
 
     <section class="privacy_policy">
 
@@ -75,15 +82,9 @@
     </section>
 </body>
 
+<div id="footer"></div>
+
 </html>
-
-
-<footer>
-    <p>enderprooffical@gmail.com</p>
-    <p>(828) 903-EDIT</p>
-    <img src="assets/Images/Endie's_Editing_New.ico" alt="Corner Icon" id="footer-icon">
-    <p>&copy; Wyatt Johnson 2025</p>
-</footer>
 </body>
 
 </html>
