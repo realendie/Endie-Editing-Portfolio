@@ -34,20 +34,22 @@
 
     <section class="hire-me">
         <h2 id="hire_me-header">Hire Me!</h2>
-        <form name="contact" data-netlify="true">
-            <label for="name">Name:</label><br>
+        <form name="contact" method="post" data-netlify="true">
+            <input type="hidden" name="subject" value="New Video Editor Inquiry - (%{submissionId})">
+
+            <label>Name:</label><br>
             <input type="text" id="name" name="name" required><br><br>
 
-            <label for="contact_info" class="hire_me-labels">Contact Info (Discord or Email):</label><br>
-            <input type="text" id="contact" name="contact" required><br><br>
+            <label class="hire_me-labels">Your Email:</label><br>
+            <input type="email" name="email" required><br><br>
 
-            <label for="project" class="hire_me-labels">Project Description:</label><br>
-            <textarea id="project" name="project" rows="4" required></textarea><br><br>
+            <label class="hire_me-labels">Project Description:</label><br>
+            <textarea id="project_info" name="project" rows="4" required></textarea><br><br>
 
-            <label for="references" class="hire_me-labels">References:</label><br>
+            <label class="hire_me-labels">References:</label><br>
             <textarea id="references" name="references" rows="3"></textarea><br><br>
 
-            <button type="submit" onclick="sendMail()">Submit</button>
+            <button type="submit">Submit</button>
         </form>
     </section>
     <br>
