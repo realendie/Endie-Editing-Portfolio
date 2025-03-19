@@ -1,7 +1,6 @@
 const videos = [
-    "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    "https://www.youtube.com/embed/tgbNymZ7vqY",
-    "https://www.youtube.com/embed/3JZ_D3ELwOQ"
+    "https://www.youtube.com/embed/w_GjBGwlPCU?si=COU1MZARLfwda7mC",
+    "https://www.youtube.com/embed/GxzfC56Hl30",
 ];
 let currentVideo = 0;
 const videoFrame = document.getElementById("videoFrame");
