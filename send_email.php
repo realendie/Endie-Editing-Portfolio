@@ -1,3 +1,16 @@
+<html>
+
+<head>
+    <title>Send Email</title>
+</head>
+
+<body>
+    <h1>Send Email</h1>
+    <p>Sorry, there was an error sending your message.</p>
+</body>
+
+</html>
+
 <?php
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
