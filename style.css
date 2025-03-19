@@ -226,3 +226,35 @@ footer {
     height: 50px;
     z-index: 0;
 }
+
+.privacy_policy {
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 5%;
+}
+
+#privacy_policy-header {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+hr {
+    border: 1px solid white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10%;
+}
+
+.license {
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: Arial, sans-serif;
+}
