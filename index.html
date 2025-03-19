@@ -34,19 +34,19 @@
 
     <section class="hire-me">
         <h2 id="hire_me-header">Hire Me!</h2>
-        <form name="contact" method="post" data-netlify="true">
+        <form name="contact" method="post" data-netlify="true" action="send_email.php">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" required><br><br>
-        
+
             <label for="contact" class="hire_me-labels">Contact Info (Discord or Email):</label><br>
             <input type="text" id="contact" name="contact" required><br><br>
-        
+
             <label for="project" class="hire_me-labels">Project Description:</label><br>
             <textarea id="project" name="project" rows="4" required></textarea><br><br>
-        
+
             <label for="references" class="hire_me-labels">References:</label><br>
             <textarea id="references" name="references" rows="3"></textarea><br><br>
-        
+
             <button type="submit">Submit</button>
         </form>
     </section>
