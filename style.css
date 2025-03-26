@@ -258,3 +258,33 @@ hr {
     margin-right: 5%;
     font-family: Arial, sans-serif;
 }
+
+#specialties-header {
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.specialties{
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.specialties div {
+    display: grid;
+    place-items: center; 
+    width: 320px;
+    padding: 30px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+}
+
+.specialties div h2 {
+    font-size: 30px;
+    margin-top: 0;
+}
+.specialties div p {
+    font-size: 18px;
+    margin-top: 5px;
+}
