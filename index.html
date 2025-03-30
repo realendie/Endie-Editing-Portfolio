@@ -61,8 +61,10 @@
 
     <section class="hire-me">
         <h2 id="hire_me-header">Hire Me!</h2>
-        <form name="contact" method="post" data-netlify="true">
+        <form name="contact" method="post" data-netlify="true" netifly-honeypot="bot-field"
+            data-netlify-recaptcha="true" action="sucess.html">
             <input type="hidden" name="subject" value="New Video Editor Inquiry - (%{submissionId})">
+            <input type="hidden" id="bot-field" name="bot-field" autocomplete="off" aria-hidden="true">
 
             <label>Name:</label><br>
             <input type="text" id="name" name="name" required><br><br>
@@ -76,6 +78,7 @@
             <label class="hire_me-labels">References:</label><br>
             <textarea id="references" name="references" rows="3"></textarea><br><br>
 
+            <div data-netlify-recaptcha="true"></div>
             <button type="submit">Submit</button>
         </form>
     </section>
