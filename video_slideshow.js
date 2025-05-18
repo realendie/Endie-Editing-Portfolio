@@ -1,6 +1,7 @@
 const videos = [
-    "https://www.youtube.com/embed/w_GjBGwlPCU?si=COU1MZARLfwda7mC",
     "https://www.youtube.com/embed/GxzfC56Hl30",
+    "https://www.youtube.com/embed/w_GjBGwlPCU?si=COU1MZARLfwda7mC",
+    "https://www.youtube.com/embed/-zZPos_uAnA?si=KVH7yYJQRoBY4RRs",
 ];
 
 let currentVideo = 0;
